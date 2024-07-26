@@ -1,0 +1,56 @@
+// ==================================================================================
+// Running the microservice
+// ==================================================================================
+
+== Running the microservice
+
+AddCrewService works in conjunction with MainCrewService.
+
+For AddCrewService, you'll need to set your specific values in the bootstrap.properties like
+[source,role="no_copy"]
+mongo.hostname=avl-mongo-1.fyre.ibm.com
+mongo.port=27017
+mongo.dbname=crewdb
+
+== Utilizing the OpenAPI UI
+
+[role='command']
+
+Go to the http://HOST:PORT/openapi/ui/[^] URL to see the OpenAPI user interface (UI) that provides API documentation and a client to test the API endpoints that you create after you see a message similar to the following example:
+
+[source,role="no_copy"]
+----
+CWWKZ0001I: Application AddCrewService started in 2.715 seconds.
+----
+
+**Try the Create operation**
+
+From the OpenAPI UI, test the create operation at the `POST /api/crew` endpoint by using the following code as the request body:
+
+[role='command']
+```
+{
+  "name": "Member1",
+  "rank": "Officer",
+  "crewID": "1"
+}
+```
+
+This request creates a new document in the `Crew` collection with a name of `Member1`, rank of `Officer`, and crew ID of `1`.
+
+You'll receive a response that contains the JSON object of the new crew member, as shown in the following example:
+[role="no_copy"]
+```
+{
+  "Name": "Member1",
+  "Rank": "Officer",
+  "CrewID": "1",
+  "_id": {
+    "$oid": "<<ID>>"
+  }
+}
+```
+
+The `ID` that you receive is a unique identifier in the collection. Save this value for future commands.
+
+
