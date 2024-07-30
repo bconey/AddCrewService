@@ -8,6 +8,8 @@
         <feature>restfulWS-3.1</feature>
         <feature>jsonb-3.0</feature>
         <feature>mpOpenAPI-3.1</feature>
+        <feature>servlet-6.0</feature>
+        <feature>pages-3.1</feature>
     </featureManager>
 
     <variable name="default.http.port" defaultValue="9082"/>
@@ -16,10 +18,10 @@
 
     <httpEndpoint host="*" httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint" />
 
-    <!--
-     <webApplication contextRoot="${app.context.root}" location="C:/Users/BrianHanczaryk/git/AddCrewService/target/AddCrewService.war" name="AddCrewService">
+    
+     <webApplication contextRoot="${app.context.root}" location="AddCrewService.war" name="AddCrewService">
      </webApplication>
-    -->
+    
 
     <cors 
      domain="/AddCrewService" 
