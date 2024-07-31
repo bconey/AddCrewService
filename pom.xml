@@ -18,7 +18,6 @@
         <liberty.var.default.http.port>9080</liberty.var.default.http.port>
         <liberty.var.default.https.port>9443</liberty.var.default.https.port>
         <app.name>${project.artifactId}</app.name>
-        <liberty.var.app.context.root>/mongo</liberty.var.app.context.root>
         <package.file>${project.build.directory}/${app.name}.zip</package.file>
     </properties>
 
